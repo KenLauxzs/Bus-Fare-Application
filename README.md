@@ -5,5 +5,5 @@ The databse of this project is frebase database.
 It has 2 tabs which is passernger list and bus fare calculator base on meter.
 
 disadvantage: 
-its uses internet to when list passenger list
+its uses internet to see the list of passengers
 
