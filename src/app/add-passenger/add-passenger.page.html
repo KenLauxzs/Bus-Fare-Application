@@ -1,0 +1,30 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/"></ion-back-button>
+    </ion-buttons>
+    <ion-title class="ion-text-center">
+      Passenger
+  </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="floating">Name</ion-label>
+    <ion-input type="text" [(ngModel)]="name" required></ion-input>
+</ion-item>
+ <h2 class="text">Destination</h2>
+<ion-item>
+    <ion-label position="floating">From</ion-label>
+    <ion-input type="text" [(ngModel)]="from" required></ion-input>
+</ion-item>
+<ion-item class="ion-margin-bottom">
+    <ion-label position="floating">To</ion-label>
+    <ion-input type="text" [(ngModel)]="to" required></ion-input>
+</ion-item>
+<ion-button expand="block" color="success" (click)="save()" class="ion-margin">
+<ion-icon name="save" slot="start"></ion-icon>
+ Save
+</ion-button>
+</ion-content>

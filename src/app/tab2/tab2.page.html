@@ -1,0 +1,31 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title class="title">
+      <b>Bus Fare Calculator</b>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content  class="ion-padding">
+    <ion-item>
+    <ion-label position="stacked">From</ion-label>
+    <ion-input type="text" [(ngModel)]="from" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label position="stacked">To</ion-label>
+      <ion-input type="text" [(ngModel)]="to" required></ion-input>
+      </ion-item>
+    <ion-item class="ion-margin-bottom">
+    <ion-label position="stacked">Total Meters(m)</ion-label>
+    <ion-input type="number" [(ngModel)]="meter" required></ion-input>
+    </ion-item>
+    <ion-button expand="block" (click)="calculate()">Calculate</ion-button>
+    <ion-card *ngIf="total">
+    <ion-card-header>
+      <ion-card-title></ion-card-title>
+    </ion-card-header>
+    <ion-card-content>
+      <h1> {{ this.result }} php. </h1> <!-- this will show the result once you clicked the calculate button-->
+    </ion-card-content>
+  </ion-card>
+</ion-content>

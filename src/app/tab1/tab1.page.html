@@ -1,0 +1,22 @@
+<ion-header [translucent]="true" class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      Travel Passenger <!-- Title-->
+    </ion-title>
+    <ion-buttons slot="primary">
+      <ion-button [routerLink]="['/add-passenger']">
+        <ion-icon slot="icon-only" name="add" size="large"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+  <ion-content class="ion-padding">
+    <ion-list *ngFor="let list of passengerData"> <!--ngFor to list the created data from firebase database and if to click it will show the data of this passenger data on alert dialog/ ma list dinhi an mga nagpaka save na passenger ha firebase database ngan kun ig click ma pop-up an data hini na travel passenger-->
+      <ion-item (click)="info(list.id)">
+        <ion-label>{{ list.name }}</ion-label> <!-- then we get the name data from database/ ngan ig lilist na an data nga nahimo ha firebase database-->
+        <ion-icon slot="end" name="open" size="small"></ion-icon> 
+      </ion-item>
+    </ion-list>
+    
+    
+</ion-content>
